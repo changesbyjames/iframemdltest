@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css">
+	<script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<style type="text/css">
+		.grid{
+			height: 250px;
+			background: rgba(0,0,0,0.2);
+			display: -webkit-flex;
+			display: flex;
+			-webkit-align-items: center;
+			align-items: center;
+			-webkit-justify-content: center;
+			justify-content: center;
+
+		}
+		iframe{
+			width:90%;
+			height:230px;
+			opacity: 0;
+			transition: all ease-in 0.2s;
+		}
+		.large{
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <div class="mdl-layout-spacer"></div>
+        <button id="demo-menu-lower-right"
+        class="mdl-button mdl-js-button mdl-button--icon">
+					  <i class="material-icons">more_vert</i>
+					</button>
+
+					<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+					    for="demo-menu-lower-right">
+					  <li class="mdl-menu__item">Some Action</li>
+					  <li class="mdl-menu__item">Another Action</li>
+					  <li disabled class="mdl-menu__item">Disabled Action</li>
+					  <li class="mdl-menu__item">Yet Another Action</li>
+					</ul>
+      </div>
+    </header>
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">Title</span>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="">Item 1</a>
+        <a class="mdl-navigation__link" href="">Item 2</a>
+        <a class="mdl-navigation__link" href="">Item 3</a>
+        <a class="mdl-navigation__link" href="">Item 4</a>
+      </nav>
+    </div>
+    <main class="mdl-layout__content">
+      <div class="page-content">
+      	<div class="mdl-grid">
+				  <div class="mdl-cell mdl-cell--12-col grid">
+				  	<iframe class="large" src="http://responsivedesign.is" id="apple" onload="setTimeout('document.getElementById(\'apple\').style.opacity=1',100)"></iframe>
+				  </div>
+				  <div class="mdl-cell mdl-cell--4-col grid">
+				  	<iframe src="testing.html" id="one" onload="setTimeout('document.getElementById(\'one\').style.opacity=1',100)"></iframe>
+				  </div>
+				  <div class="mdl-cell mdl-cell--4-col grid">
+				  	<iframe src="testing.html" id="two" onload="setTimeout('document.getElementById(\'two\').style.opacity=1',200)"></iframe>
+				  </div>
+				  <div class="mdl-cell mdl-cell--4-col grid">
+				  	<iframe src="testing.html" id="three" onload="setTimeout('document.getElementById(\'three\').style.opacity=1',300)"></iframe>
+				  </div>
+				</div>
+      </div>
+    </main>
+  </div>
+	</div>
+</body>
+</html>
